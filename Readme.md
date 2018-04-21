@@ -1,6 +1,6 @@
 # Zero Or One I'm Bad At Counting
 
-http://badatcounting.github.io/
+http://awalterschulze.github.io/music/
 
 # How to build
 
