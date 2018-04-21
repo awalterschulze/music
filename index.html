@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>audio.js</title>
+    <title>Music Log</title>
     <meta content="width=device-width, initial-scale=0.6" name="viewport">
     <style>
       body { color: #666; font-family: sans-serif; line-height: 1.4; }
@@ -11,7 +11,7 @@
       a { color: #888; text-decoration: none; }
       #wrapper { width: 400px; margin: 40px auto; }
       
-      ol { padding: 0px; margin: 0px; list-style: decimal-leading-zero inside; color: #ccc; width: 460px; border-top: 1px solid #ccc; font-size: 0.9em; }
+      ol { padding: 0px; margin: 0px; list-style: none; color: #ccc; width: 460px; border-top: 1px solid #ccc; font-size: 0.9em; }
       ol li { position: relative; margin: 0px; padding: 9px 2px 10px; border-bottom: 1px solid #ccc; cursor: pointer; }
       ol li a { display: block; text-indent: -3.3ex; padding: 0px 0px 0px 20px; }
       li.playing { color: #aaa; text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3); }
@@ -59,52 +59,347 @@
           audio.load($('a', this).attr('data-src'));
           audio.play();
         });
-        // Keyboard shortcuts
-        $(document).keydown(function(e) {
-          var unicode = e.charCode ? e.charCode : e.keyCode;
-             // right arrow
-          if (unicode == 39) {
-            var next = $('li.playing').next();
-            if (!next.length) next = $('ol li').first();
-            next.click();
-            // back arrow
-          } else if (unicode == 37) {
-            var prev = $('li.playing').prev();
-            if (!prev.length) prev = $('ol li').last();
-            prev.click();
-            // spacebar
-          } else if (unicode == 32) {
-            audio.playPause();
-          }
-        })
+
       });
     </script>
   </head>
   <body>
     <div id="wrapper">
-      <h1>wait what — notorious xx <em>(2009)</em></h1>
+      <h1>Music Log</h1>
+      <p>My friends and I attempting to make music:</p>
       <audio preload></audio>
       <ol>
-        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/01-dead-wrong-intro.mp3">dead wrong intro</a></li>
-        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/02-juicy-r.mp3">juicy-r</a></li>
-        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/03-its-all-about-the-crystalizabeths.mp3">it's all about the crystalizabeths</a></li>
-        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/04-islands-is-the-limit.mp3">islands is the limit</a></li>
-        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/05-one-more-chance-for-a-heart-to-skip-a-beat.mp3">one more chance for a heart to skip a beat</a></li>
-        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/06-suicidal-fantasy.mp3">suicidal fantasy</a></li>
-        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/07-everyday-shelter.mp3">everyday shelter</a></li>
-        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/08-basic-hypnosis.mp3">basic hypnosis</a></li>
-        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/09-infinite-victory.mp3">infinite victory</a></li>
-        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/10-the-curious-incident-of-big-poppa-in-the-nighttime.mp3">the curious incident of big poppa in the nighttime</a></li>
-        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/11-mo-stars-mo-problems.mp3">mo stars mo problems</a></li>
+
+        <li>2016-03-05
+          <a href="#" data-src="./music/Frail Care Unit - 01 - Chloroform Dreamer.mp3">
+            Frail Care Unit - Chloroform Dreamer
+          </a>
+          Me and my brother in law finally making a song.
+        </li>
+
+        <li>2016-02-18
+          <a href="#" data-src="./music/Post Post - Nostalgia - 01 - Consider this Moment.mp3">
+            Post Post - Consider this Moment
+          </a>
+          So chill that my thoughts are actually free to wander.
+        </li>
+
+        <li>2015-11-22
+          <a href="#" data-src="./music/Post Post - Nostalgia - 02 - Repercussions are Therapeutic.mp3">
+            Post Post - Repercussions are Therapeutic
+          </a>
+          Starts out as a headache, but productive hours are ahead.
+        </li>
+
+        <li>2015-11-21
+          <a href="#" data-src="./music/Om te Neurie - Omgedolfte Tuin - 06 - jou opgediep golwende tee-gelowige.mp3">
+            Om te Neurie - jou opgediep golwende tee-gelowige
+          </a>
+          When you are too emotional to code sometimes it helps to record a song.
+        </li>
+
+        <li>2015-08-23
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 15 - Fluffy G.mp3">
+            Zero or One I'm Bad at Counting - Fluffy G
+          </a>
+          When you are too emotional to code sometimes it helps to record a song.
+        </li>
+
+        <li>2015-02-21
+          <a href="#" data-src="./music/Om te Neurie - Omgedolfte Tuin - 05 - Umfazi Nentaka Yehlathi.mp3">
+            Om te Neurie - Umfazi Nentaka Yehlathi
+          </a>
+          A Xhosa story about a woman who gets eaten by a bird.
+        </li>
+
+        <li>
+          <a href="#" data-src="./music/Om te Neurie - Omgedolfte Tuin - 04 - Verlaten Forten.mp3">
+            Om te Neurie - Verlaten Forten
+          </a>
+          A Dutch poem with some music.
+          <a href="./music/Om te Neurie - Omgedolfte Tuin - 04 - Verlaten Forten(1of2).png">Part 1 of 2</a>
+          <a href="./music/Om te Neurie - Omgedolfte Tuin - 04 - Verlaten Forten(2of2).png">Part 2 of 2</a>
+        </li>
+
+        <li>2014-08-09
+          <a href="#" data-src="./music/Post Post - Nostalgia - 03 - Pianos were made for Percussion.mp3">
+            Post Post - Pianos were made for Percussion
+          </a>
+          This song has got my brain firing on all cylinders.
+          Do you remember when all the cool kids wanted to play piano?
+        </li>
+
+        <li>2014-08-02
+          <a href="#" data-src="./music/Android killed the Litchi - Imitations - 02 - Tribute to Mark Knopfler.mp3">
+            Android killed the Litchi - Tribute to Mark Knopfler
+          </a>
+          Here we are attempting something in the style of Brothers in arms by Mark Knopfler.
+          <p>We have a 10 bar chord progression which is something like: C - C - A - F - C - C - A - F - F - F</p>
+          I thought this chord progression might make it hard to realise that it is repeating and give a more continious feel to the song.
+        </li>
+
+        <li>2014-05-03
+          <a href="#" data-src="./music/Om te Neurie - Omgedolfte Tuin - 03 - Ritteltit se Assegaaie.mp3">
+            Om te Neurie - Ritteltit se Assegaaie
+          </a>
+          A short story in Afrikaans with some music.
+          <a href="./music/Om te Neurie - Omgedolfte Tuin - 03 - Ritteltit se Assegaaie.pdf">This short story was translated by my friend.</a>
+        </li>
+
+        <li>2014-04-12
+          <a href="#" data-src="./music/Post Post - Nostalgia - 04 - Trip Advisor.mp3">
+            Post Post - Trip Advisor
+          </a>
+          Be advised the 5 bar chord progression, some extra creepy sounds and an extra fast shaker keeps things trippy.
+          Oh yeah and beware the shred.
+        </li>
+
+        <li>2014-03-01
+          <a href="#" data-src="./music/Om te Neurie - Omgedolfte Tuin - 02 - Ars Poetica (Belydenis).mp3">
+            Om te Neurie - Ars Poetica (Belydenis)
+          </a>
+          Another Afrikaans poem with some music. This poem,
+          <a href="http://mnrmuller.wordpress.com/2011/11/15/belydenis-ars-poetica/">Ars Poetica (Belydenis), was written by my friend</a>
+        </li>
+
+        <li>2014-01-05
+          <a href="#" data-src="./music/Post Post - Nostalgia - 05 - Multiplayer.mp3">
+            Post Post - Multiplayer
+          </a>
+          Interestingly a midi bass with distortion, playing very short notes, sounds a lot like an 8-bit instrument.
+          This song makes us think of playing quake multiplayer.
+        </li>
+
+        <li>2014-01-03
+          <a href="#" data-src="./music/Om te Neurie - Omgedolfte Tuin - 01 - Gedagtig aan my Krioelende dood.mp3">
+            Om te Neurie - Gedagtig aan my Krioelende dood
+          </a>
+          Our first recording of an Afrikaans poem with some music.
+          This poem, <a href="http://mnrmuller.wordpress.com/2011/11/15/gedagtig-aan-my-krioelende-dood/">
+          Gedagtig aan my Krioelende dood, was written by my friend.</a>
+        </li>
+
+        <li>2013-12-30
+          <a href="#" data-src="./music/Android killed the Litchi - Imitations - 01 - Tribute to Funk.mp3">
+            Android killed the Litchi - Tribute to Funk
+          </a>
+          Here we are attempting to make a song in the style of funk.
+          "You ever drunk baileys from a shoe?" - Old Gregg
+        </li>
+
+        <li>2013-11-14
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 14 - In celebration of proposal.mp3">
+            Zero or One I'm Bad at Counting - In celebration of proposal
+          </a>
+          This song I composed for after my proposal to my wife.
+          She liked it so much she used it as her wedding march.
+        </li>
+
+        <li>2013-11-13
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 13 - In anticipation of proposal.mp3">
+            Zero or One I'm Bad at Counting - In anticipation of proposal
+          </a>
+          This song was playing just before my proposal to my wife.
+          I took two days off from work, so I could compose this song and the following song "In celebration of proposal" in secret.
+        </li>
+
+        <li>2013-09-15
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 12 - Lets see what this software can do.mp3">
+            Zero or One I'm Bad at Counting - Lets see what this software can do
+          </a>
+          This was just me playing around with some Ableton Live for the first time.
+        </li>
+
+        <li>2013-03-05
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 09 - Nine Nine Nine.mp3">
+            Zero or One I'm Bad at Counting - Nine Nine Nine
+          </a>
+          This song was inspired by a T shirt: "999 Evil when I do handstands"
+          The idea is that there are nine bars of music, of which the chord progression should repeat nine times.
+          Currently the song is still too short.
+          Maybe one day I'll finish it.
+        </li>
+
+        <li>2012-09-05
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 10 - DanceCore 83.mp3">
+            Zero or One I'm Bad at Counting - DanceCore 83
+          </a>
+          I convinced my girlfriend to make some sounds over the mic.
+          She was really shy so I have to edit them until she could not recognize herself.
+        </li>
+
+        <li>2012-06-24
+          <a href="#" data-src="./music/Few and Far Between - EP - 04 - Beat of Broken Hearts.mp3">
+            Few and Far Between - Beat of Broken Hearts
+          </a>
+          <h4>Lyrics</h4>
+          <p>
+              I hear my thoughts calling out to yours again
+              let me in, let me see, what you dream
+          </p>
+          <p>
+              the silence marches on, to the beat of broken hearts
+              a quite smile hides, the truth of the thoughts you keep inside
+              eyes light up to hear, when words are said though incinscere
+              the silence marches on, and the silent walk alone
+          </p>
+          <p>
+              I never seem to know, of how much ive seen is what youve shown
+              sleepless nights weave truths, and dreams tell me what you wanted to
+          </p>
+        </li>
+
+        <li>2012-06-16
+          <a href="#" data-src="./music/Few and Far Between - EP - 03 - Hardcore.mp3">
+            Few and Far Between - Hardcore
+          </a>
+          We wrote this song in 2005 with some heavy Muse influences.
+          My then roommate wrote the drums.
+          In 2012 we decided to record it just for fun.
+          The drums are still my old roommate's midi drums just with some reverb.
+        </li>
+
+        <li>2012-05-27
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 11 - Blinker.mp3">
+            Zero or One I'm Bad at Counting - Blinker
+          </a>
+          I don't really think I can sing.
+          I don't really think I can write lyrics either.
+          This is one of the few songs that I actually composed before I started recording it.
+        </li>
+
+        <li>2012-05-13
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 08 - Listening to Myself.mp3">
+            Zero or One I'm Bad at Counting - Listening to Myself
+          </a>
+          Playing another note on the previously delayed note can have quite an interesting effect.
+          I think I should have made the delayed note a little louder.
+        </li>
+
+        <li>2012-03-15
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 07 - I hate things song except that part where.mp3">
+            Zero or One I'm Bad at Counting - I hate things song except that part where
+          </a>
+          I was trying to make something against my natural instincts and tastes.
+          I ended up with something I did not like and was about to throw it away.
+          My girlfriend convinced me to keep it and to her credit, it grew on me.
+        </li>
+
+        <li>2011-12-31
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 06 - Secret (Version 2).mp3">
+            Zero or One I'm Bad at Counting - Secret (Version 2)
+          </a>
+        </li>
+
+        <li>2011-10-19
+          <a href="#" data-src="./music/Few and Far Between - EP - 02 - Your Faults Are My Own.mp3">
+            Few and Far Between - Your Faults Are My Own
+          </a>
+        </li>
+
+        <li>2011-09-25
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 05 - Thank You Ramfest 2011 (version 2).mp3">
+            Zero or One I'm Bad at Counting - Thank You Ramfest 2011 (version 2)
+          </a>
+          This is just an updated version of Thank you Ramfest 2011.
+          I can't decide which one I prefer.
+        </li>
+
+        <li>2011-09-11
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 04 - Space Cowboy.mp3">
+            Zero or One I'm Bad at Counting - Space Cowboy
+          </a>
+        </li>
+
+        <li>2011-07-09
+          <a href="#" data-src="./music/Totally Indie - Single - 01 - Totally Indie.mp3">
+            Totally Indie - Totally Indie
+          </a>
+          In 2011 my friend came over and we wrote and recorded a new song in 24 hours.
+          This was when I realized that making a song in day is a great way to make music.
+          He taught me a lot in that day about how to use a digital audio workstation.
+          I just played some of the guitar and watched him work his magic.
+        </li>
+
+        <li>2011-03-20 
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 03 - Thank You Ramfest 2011.mp3">
+            Zero or One I'm Bad at Counting - Thank You Ramfest 2011
+          </a>
+          I really enjoyed Ramfest 2011.
+          This is a Thank you to everyone who made it possible.
+          I remember lying in my tent and not being able to go to sleep, because dubstep was playing until 7 am.  
+          This was not a problem,  I actually rather enjoyed it.
+        </li>
+
+        <li>2011-02-13
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 02 - Stargazer (version 2).mp3">
+            Zero or One I'm Bad at Counting - Stargazer (version 2)
+          </a>
+          This is the first song I recorded for my girlfriend.
+          This was one of her favourite songs, that I used to play over and over on the guitar.
+        </li>
+
+        <li>2011-02-07
+          <a href="#" data-src="./music/Zero or One I'm Bad at Counting - Experiments - 01 - Ringtone for a Hero.mp3">
+            Zero or One I'm Bad at Counting - Ringtone for a Hero
+          </a>
+          This is the first song I made using my Eleven Rack and Pro Tools 8 LE.
+          The idea was that it should sound like intro music for an action series.
+        </li>
+
+        <li>2007-09-24
+          <a href="#" data-src="./music/Few and Far Between - EP - 01 - Echoes.mp3">
+            Few and Far between - Echoes
+          </a>
+          This is first song we recorded.  
+          We did not have any real recording equipment.
+          Except for a microphone, guitar pedal and normal pc sound card.
+          
+          <h3>Lyrics</h3>
+
+          <h4>Verse 1</h4>
+
+          <p>I can hear your call, it echoes through the halls
+The slightest hint of sound, seeping through the walls
+More than I can know, this message from below
+Now silent was a voice, I heard but not by choice
+It's clear to me now, there's some-one else around
+I prove that I alive, by calling to you now
+I've heard this before, an echo of whats no more
+It's my own voice I hear, soon to disapear
+</p>
+
+<h4>Chorus 1</h4>
+
+<p>
+You leave me dying here, as I'm bleeding on the floor
+And I just have to ask, was it me you were looking for
+I hear you crying from the dark, I try find what keeps us apart,
+Your voice is starting to disapear, please take me away from here
+</p>
+
+<h4>Verse 2</h4>
+
+<p>
+You left me hear, with the quite fear, that there's something left unknown
+I could see the signs in your quite eyes, hoping for something more
+As you walk away with a final tear, cause theres no words left to say
+I'm left hear with one last beat, of what once was a broken heart
+</p>
+
+<h4>Chorus 2</h4>
+
+<p>
+I hear you crying from the dark, I try find what keeps us apart,
+Your voice is starting to disapear, please take me away from here
+You leave me dying here, as I'm bleeding on the floor
+And I just have to ask, was it me you were looking for
+</p>
+
+        </li>
+
       </ol>
     </div>
-    <div id="shortcuts">
-      <div>
-        <h1>Keyboard shortcuts:</h1>
-        <p><em>&rarr;</em> Next track</p>
-        <p><em>&larr;</em> Previous track</p>
-        <p><em>Space</em> Play/pause</p>
-      </div>
-    </div>
+    
   </body>
 </html>
