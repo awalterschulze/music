@@ -49,7 +49,7 @@
 
         // Load in the first track
         var hash = $(location).attr('hash');
-        var a_elem = $('li a');
+        var a_elem = $('li p a');
         if (hash !== "") {
             var id = hash.substring(1);
             if (id.includes("-")) {
@@ -63,10 +63,10 @@
             }
         }
         if (a_elem.length == 0) {
-          a_elem = $('li a');
+          a_elem = $('li p a');
         }
         var data_src = a_elem.attr('data-src');
-        a_elem.parent().first().addClass('playing').siblings().removeClass('playing');
+        a_elem.parent().parent().addClass('playing').siblings().removeClass('playing');
         var audio = audios[0];
         audio.load(data_src);
 
